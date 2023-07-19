@@ -11,9 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.requiredSize
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
@@ -21,9 +19,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ChipColors
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -38,8 +34,7 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.practice.R
-import com.example.practice.ui.theme.AquaBlue
+import androidx.navigation.NavController
 import com.example.practice.ui.theme.Beige1
 import com.example.practice.ui.theme.BlueViolet1
 import com.example.practice.ui.theme.ButtonBlue
@@ -47,7 +42,6 @@ import com.example.practice.ui.theme.DeepBlue
 import com.example.practice.ui.theme.LightGreen2
 import com.example.practice.ui.theme.LightRed
 import com.example.practice.ui.theme.OrangeYellow1
-import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 
 @Composable
@@ -274,7 +268,9 @@ fun Section5child(){
 @Preview(showBackground = true)
 @Composable
 
-fun SectionPreview(){
+fun SectionPreview(
+    navController: NavController
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -287,6 +283,10 @@ fun SectionPreview(){
         Section3()
         Section4()
         Section5child()
+        Button(onClick = {navController.navigate("detail")},
+            modifier = Modifier.align(Alignment.End)) {
+            Text(text = "Next Screen")
+        }
     }
 
 }
