@@ -234,7 +234,11 @@ fun ShowMe(
 //    LazyColumnComposable()
     LazyHorizontalGridExample()
 //    Scaffoldexample()
-    Button(onClick = { navController.run { navigate("Again") } }) {
+    Button(onClick = { navController.navigate("Again"){
+        popUpTo(navController.graph.id){
+            inclusive = false
+        }
+    } }) {
         Text(text = "Previous Screen")
     }
 }
