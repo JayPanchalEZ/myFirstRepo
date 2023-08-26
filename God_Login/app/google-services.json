@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "472573016268",
+    "project_id": "godlogin-cc177",
+    "storage_bucket": "godlogin-cc177.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472573016268:android:b7d5f873c5af5a1183aa69",
+        "android_client_info": {
+          "package_name": "com.example.god_login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472573016268-oatt41h18v92t9heefpbljichb9jpjtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZtSYpjR3HhBJgtZ7kBkIj_EQdoZCz-KY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472573016268-oatt41h18v92t9heefpbljichb9jpjtp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
